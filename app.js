@@ -85,13 +85,56 @@ getWeather();
 // Update everyt 10. minut
 setInterval(getWeather, 10 * 60 * 1000);
 
-// Weathercode   →  Description           →             Ikon
 
-// 0	          Klar himmel	                            sunny
-// 1,	          Delvis skyet                            partly cloudy
-// 2, 3	        Skyet / Overskyet	                      cloud
-// 45, 48	      Tåke / Tåkedis	                        foggy
-// 51, 53, 55	  Lett / Moderat / Kraftig regn	          rainy
-// 61, 63, 65	  Snø / Snøbyger / Kraftig snø	          snowing
-// 80, 81, 82	  Regnbyger / Kraftig regnbyger	          rainy
-// (default)	  Ukjent vær	                            cloud (fallback)
+// Next weather: today/ days to come
+const url =
+  "https://api.open-meteo.com/v1/forecast?latitude=60.39&longitude=5.32&current_weather=true&hourly=temperature_2m&daily=temperature_2m_max,temperature_2m_min&timezone=auto";
+
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      // 🔹 Dagens vær
+      const current = data.current_weather;
+      document.querySelector(
+        ".weather-temp"
+      ).textContent = `${current.temperature}°C`;
+      document.querySelector(".weather-desc").textContent = "Klar himmel"; // Du kan mappe weathercode senere
+
+      // 🔹 Resten av i dag (neste 3 timer)
+      const hourlyTimes = data.hourly.time;
+      const hourlyTemps = data.hourly.temperature_2m;
+      const now = new Date();
+      const currentHour = now.getHours();
+
+      const hourlyContainer = document.querySelector(".forecast-grid.hourly");
+      hourlyContainer.innerHTML = ""; // Tøm først
+
+      for (let i = currentHour + 1; i <= currentHour + 3; i++) {
+        const time = hourlyTimes[i].slice(11, 16); // "HH:MM"
+        const temp = hourlyTemps[i];
+        hourlyContainer.innerHTML += `
+        <div class="forecast-hour">
+          <img src="icons/cloudy.svg" alt="Cloudy" />
+          <div>${time} – ${temp}°C</div>
+        </div>
+      `;
+      }
+
+      // 🔹 Kommende dager (neste 3 dager)
+      const dailyContainer = document.querySelector(".forecast-grid.daily");
+      dailyContainer.innerHTML = ""; // Tøm først
+
+      for (let i = 1; i <= 3; i++) {
+        const date = new Date(data.daily.time[i]);
+        const weekday = date.toLocaleDateString("no-NO", { weekday: "short" });
+        const max = data.daily.temperature_2m_max[i];
+        const min = data.daily.temperature_2m_min[i];
+
+        dailyContainer.innerHTML += `
+        <div class="forecast-day">
+          <img src="icons/partly_cloudy.svg" alt="Partly Cloudy" />
+          <div>${weekday} – Max ${max}° / Min ${min}°</div>
+        </div>
+      `;
+      }
+    });
