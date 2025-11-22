@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: 'Karla', sans-serif;
+  color: #1C1C1C;
+}
+
+/* Wrapper: venstre = vær, høyre = bilde */
+.weather-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Værinfo */
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Kort */
+.weather-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(62, 96, 111, 0.85);
+  color: #E9E3D5;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.weather-text { max-width: 300px; }
+.weather-uppercase { font-size: 0.9rem; text-transform: uppercase; opacity: 0.85; }
+.weather-temp { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; margin: 0.5rem 0; }
+.weather-desc { font-size: 1.2rem; margin: 0; opacity: 0.95; }
+
+.weather-icon img {
+  width: 200px;
+  height: auto;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.35));
+}
+
+/* Glass-seksjon */
+.glass-section {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: #1C1C1C;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.forecast-hour {
+  text-align: center;
+  background-color: #3E606F;
+  color: #E9E3D5;
+  border-radius: 8px;
+  padding: 0.6rem;
+}
+
+.forecast-hour img {
+  width: 52px;
+  margin-bottom: 0.4rem;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.35));
+}
+
+/* Bildet til høyre */
+.weather-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .weather-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .weather-image {
+    order: -1; /* flytter bildet over */
+    margin-bottom: 1rem;
+  }
+}

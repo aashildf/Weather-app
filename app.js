@@ -100,7 +100,7 @@ const url =
       ).textContent = `${current.temperature}°C`;
       document.querySelector(".weather-desc").textContent = "Klar himmel"; // Du kan mappe weathercode senere
 
-      // 🔹 Resten av i dag (neste 3 timer)
+      // Next 3 hours
       const hourlyTimes = data.hourly.time;
       const hourlyTemps = data.hourly.temperature_2m;
       const now = new Date();
@@ -120,7 +120,7 @@ const url =
       `;
       }
 
-      // 🔹 Kommende dager (neste 3 dager)
+      //  Next 3 days
       const dailyContainer = document.querySelector(".forecast-grid.daily");
       dailyContainer.innerHTML = ""; // Tøm først
 
