@@ -1,6 +1,6 @@
 # Bergen Weather App ☔
 
-En personlig værapp inspirert av Bergen, med lokal værmelding og tips til aktiviteter i Bergen unasett regne eller snø. Appen kombinerer sanntids værdata med egne tekster og figurer som skifter antrekk alt etter hvilket vær det er.
+En personlig værapp inspirert av Bergen, med lokal værmelding og tips til aktiviteter i Bergen unasett vær, regn eller snø. Appen kombinerer sanntids værdata med egne tekster og figurer som skifter antrekk alt etter hvilket vær det er.
 
 ---
 
