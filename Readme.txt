@@ -1,16 +1,15 @@
 # Bergen Weather App ☔
 
-En personlig værapp inspirert av Bergen – med regn, poesi og AI‑illustrasjoner.  
-Appen kombinerer sanntids værdata med egne tekster og figurer, og gir en lokal opplevelse av været.  
+En personlig værapp inspirert av Bergen, med lokal værmelding og tips til aktiviteter i Bergen unasett regne eller snø. Appen kombinerer sanntids værdata med egne tekster og figurer som skifter antrekk alt etter hvilket vær det er.
 
 ---
 
 ## ✨ Funksjoner
-- Viser dagens vær med temperatur, beskrivelse og ikon  
-- Prognoser for både timer og dager fremover  
-- Illustrasjoner og figurer generert med AI, bearbeidet i Figma og importert som SVG  
-- Personlige værmeldinger knyttet til ulike værkoder  
-- Responsivt design – fungerer på både desktop og mobil  
+- Viser dagens vær med temperatur, beskrivelse og ikon.  
+- Prognoser for både timer og dager fremover.  
+- Illustrasjoner og figurer generert med AI, bearbeidet i Figma og importert som SVG. 
+- Personlige værmeldinger knyttet til ulike værkoder.  
+- Responsivt design.
 
 ---
 
