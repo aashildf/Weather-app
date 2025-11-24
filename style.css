@@ -1,69 +1,74 @@
 body {
-    margin: 0;
-    font-family: 'Karla', sans-serif; 
-    color: #1C1C1C;
+  margin: 0;
+  font-family: 'Karla', sans-serif; 
+  color: #1C1C1C;
+  background: #fcfcfb
 }
 
-/* Container */
+/* Hovedgrid: venstre/høyre */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* venstre og høyre halvdel */
+  gap: 1rem;
+  padding: 1rem 2rem;
+  align-items: start;
+}
+
+/* Venstre side */
 .weather-wrapper {
-      padding-top: 2rem;  
+  padding-top: 2rem;  
 }
 
-/* Card */
 .weather-card {
+  margin: 1rem auto; 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #3E606F;
+  background: rgba(62, 96, 111, 0.6); 
   color: #E9E3D5;
   border-radius: 1rem;
   padding: 2rem;
   max-width: 500px;
-  margin: 1rem auto;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
-
-/* Text */
 .weather-text {
-    max-width: 300px;
+  max-width: 300px;
 }
 
+
+
 .weather-uppercase {
-    font-size: 0.9rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    opacity: 0.8;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: 0.8;
 }
 
 .weather-temp {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;   
-    font-weight: 700;
-    margin: 0.5rem 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;   
+  font-weight: 700;
+  margin: 0.5rem 0;
 }
 
 .weather-desc {
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin: 0;
-    opacity: 0.9;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+  opacity: 0.9;
 }
-
-
 
 .weather-icon img {
   width: 250px;
   height: auto;
   opacity: 0.9;
-
 }
 
-
-/*Weather to come */
+/* Prognoser */
 .glass-section {
   margin: 1rem auto;
-  background:  #678c9b;
+  background: rgba(62, 96, 111, 0.6); 
   backdrop-filter: blur(8px);
   border-radius: 12px;
   padding: 2rem;
@@ -99,8 +104,82 @@ body {
   margin-bottom: 0.5rem;
 }
 
-h2{
-    font-weight: 500;
-    text-transform: uppercase;
-    opacity: 0.8;
+h2 {
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* Right side: visual-panel */
+.visual-panel {
+  padding-top: 1rem;  
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-height: 800px;   
+  height: 100%;
+  overflow: hidden; 
+}
+
+
+.bergen-img {
+  opacity: 60%;
+  width: 160%;
+  margin-left: -35%;  
+  height: auto;
+  max-height: 100%;     
+  object-fit: contain;
+}
+
+
+.custom-text,
+.custom-figure {
+  position: absolute;
+  background: none;
+}
+
+/* Custom Weather-txt */
+.custom-text {
+  text-transform: uppercase;
+  text-shadow: #333;
+  left: 4%;
+  top: 19%;
+  width: 40%;             
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Weather-girl */
+.custom-figure {
+  right: -2%;
+  bottom: -2.7%;
+  width: 45%;             
+  display: flex;
+  justify-content: center;
+}
+
+.custom-figure img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;   
+}
+
+/* Responsiv stacking på mobil */
+@media (max-width: 768px) {
+  .visual-panel {
+    display: block;
+  }
+  .custom-text,
+  .custom-figure {
+    position: static; /* legg under bildet på mobil */
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .custom-figure img {
+    max-width: 60%;
+    margin: 0 auto;
+  }
 }
