@@ -31,21 +31,21 @@ const customContent = {
 
   // Skyet (1,2,3)
   1: {
-    text: "Det ser ut til å  bli oppholdsvær i dag. Kom deg ut og nyt været, Bergen er aller vakrest i et slikt strålende vær!",
+    text: "Ingen regn i sikte! Skyer eller ei, benytt sjansen til å ta en tur i Akvariet, du vet aldri når sjansen byr seg igjen.",
     image: "icons/cloudy_girl.svg",
   },
   2: {
-    text: "Det ser ut til å  bli oppholdsvær i dag. Kom deg ut og nyt, Bergen er aller vakrest i et slikt strålende høstvær!",
+    text: "En strålende dag, ifølge bergensere...for det renger jo ikke! Så kom deg ut, ta en tur i Skostredet og nyt en god middag på en av de koselige spisestedene etterpå? ",
     image: "icons/cloudy_girl.svg",
   },
   3: {
-    text: "Det ser ut til å  bli oppholdsvær i dag. Kom deg ut og nyt været, Bergen er aller vakrest i et slikt strålende høstvær!",
+    text: "Det ser ut til å  bli oppholdsvær i dag. Kom deg ut og nyt været, Bergen er aller vakrest mellom bygene",
     image: "icons/cloudy_girl.svg",
   },
 
   // Regn (51–55, 80–82)
   51: {
-    text: "Det ser ut til at det kommer til å regne litt i dag. Ta med deg paraplyem, og opplev Bergen slik den vanligvis er!",
+    text: "Det ser ut til at det kommer til å regne litt i dag. Ta med deg paraplyen, og opplev Bergen slik den vanligvis er!",
     image: "icons/rain_girl.svg",
   },
   53: {
@@ -53,7 +53,7 @@ const customContent = {
     image: "icons/rain_girl.svg",
   },
   55: {
-    text: "Det regner mye i Bergen i dag! Finn frem regnjakken og gå en tur langs Bryggen. Byen er aller vakrest når den speiler seg i vannet.",
+    text: "Det regner mye i Bergen i dag! Finn frem regnjakken og gå en tur i sentrum, her er det ikke langt mellom sjarmerende butikker og koselige kafeer- om det skulle komme en skikkelig skyllebøtte .",
     image: "icons/rain_girl.svg",
   },
   80: {
@@ -65,20 +65,20 @@ const customContent = {
     image: "icons/rain_girl.svg",
   },
   82: {
-    text: "Det pøser ned! Finn frem regnjakken og gå en tur langs Bryggen. Byen er aller vakrest når den speiler seg i vannet.",
+    text: "Det pøser ned! Finn frem oljeuhyret og opplev en autentisk Bergensk dag. Og har du ikke regnjakke, kan du jo ta turen innom en av de mange lokale butikkens som tilbyr ekte Bergensk regnbekledning. Kommer sydvesten på mote igjen mon tro?.",
     image: "icons/rain_girl.svg",
   },
 
   // Snø (61–65)
   61: {
-    text: "Det snør i bergen i dag! Gjør som bergensere flest, og ta Fløybanen opp for å stå på ski eller ake, gøy for både liten og stor!!",
+    text: "Det snør i bergen i dag! Gjør som bergensere flest, og ta Fløybanen opp for å stå på ski eller ake ned igjen, gøy for både liten og stor!!",
     image: "icons/winter_girl.svg",
   },
   63: {
     text: "Snøbygene ligger tett over byen. Ta en rusletur langs Lille Lungegårdsvann, og la deg omslutte av det mystiske lyset.",
     image: "icons/winter_girl.svg",
   },
-  65: { text: "Kraftig snø – tid for kakao!", image: "icons/winter_girl.svg" },
+  65: { text: "Kraftig snø, tid for kakao! Eller hvem vet, fryser det ordentlig på kan du kanskje gå på skøyter på Lungegårdsvannet?", image: "icons/winter_girl.svg" },
 
   // Torden (95–99)
   95: {
@@ -86,7 +86,7 @@ const customContent = {
     image: "icons/thunder_girl.svg",
   },
   96: {
-    text: "Torden ruller over fjellene. benytt sjansen til å besøke grieghallen, kanskje en konsert med Dovregubbens hall passer i dag?",
+    text: "Torden ruller over fjellene. benytt sjansen til å besøke Grieghallen, kanskje en konsert med Dovregubbens hall passer i dag?",
     image: "icons/thunder_girl.svg",
   },
   99: {
