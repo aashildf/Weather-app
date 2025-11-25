@@ -35,7 +35,7 @@ const customContent = {
     image: "icons/cloudy_girl.svg",
   },
   2: {
-    text: "En strålende dag, ifølge bergensere...for det renger jo ikke! Så kom deg ut, ta en tur i Skostredet og nyt en god middag på en av de koselige spisestedene etterpå? ",
+    text: "En strålende dag, ifølge bergensere...for det renger jo ikke! Så kom deg ut, ta en tur i Skostredet og nyt en god middag på en av de koselige spisestedene etterpå. ",
     image: "icons/cloudy_girl.svg",
   },
   3: {
@@ -82,16 +82,16 @@ const customContent = {
 
   // Torden (95–99)
   95: {
-    text: "Lyn og torden! Finn er bortgjemt kafe blandt Bergens vakre smau, det er aldri feil å gå seg vill!",
-    image: "icons/thunder_girl.svg",
+    text: "Lyn og torden! Løp inn og finn er bortgjemt kafe blandt Bergens vakre smau, det er aldri feil å gå seg vill!",
+    image: "icons/storm.svg",
   },
   96: {
-    text: "Torden ruller over fjellene. benytt sjansen til å besøke Grieghallen, kanskje en konsert med Dovregubbens hall passer i dag?",
-    image: "icons/thunder_girl.svg",
+    text: "Torden ruller over fjellene, kom deg inn under tak, og benytt gjerne sjansen til å besøke Grieghallen, kanskje en konsert med Dovregubbens hall passer i dag?",
+    image: "icons/storm.svg",
   },
   99: {
-    text: "Torden ruller over fjellene. benytt sjansen til å besøke grieghallen, kanskje en konsert med Dovregubbens hall passer i dag?",
-    image: "icons/thunder_girl.svg",
+    text: "Lyn og torden! Kom deg vekk fra uværet, i dag er det best å se byen mellom de 7 fjell trygt innenfra. ",
+    image: "icons/storm.svg",
   },
 };
 
