@@ -1,7 +1,4 @@
 # Bergen Weather App ☔
-
-![Bergen weather app](C:\Users\ashil\Pictures\Screenshots\Skjermbilde 2026-01-04 204638.png)
-
 En personlig værapp inspirert av Bergen, med lokal værmelding og tips til aktiviteter i Bergen unasett vær, regn eller snø. Appen kombinerer sanntids værdata med egne tekster og figurer som skifter antrekk alt etter hvilket vær det er.
 
 ---
