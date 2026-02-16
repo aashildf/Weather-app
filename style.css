@@ -169,6 +169,24 @@ h2 {
 
 
 
+
+/* -------------------------------------------------- */
+/* FOOTER */
+/* ------------------------------------------------- */
+.site-footer {
+  margin-top: 3rem;
+  padding: 1rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  background: #fcfcfb;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+
+}
+
+
 /* ----------------------------------------------- */
 /* MEDIA QUERY*/
 /* ------------------------------------------------ */

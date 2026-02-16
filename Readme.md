@@ -48,6 +48,18 @@ I stedet for å bare vise værdata, ønsket jeg å:
 
 ---
 
+## 🎨 Illustrasjoner
+
+Alle illustrasjoner er generert med AI og videreutviklet og raffinert i Figma.
+
+<p align="center">
+  <img src="icons/sunnygirl.svg" width="180">
+  <img src="icons/rain_girl.svg" width="180">
+  <img src="icons/winter_girl.svg" width="180">
+</p>
+
+
+
 ## 💡 Hva jeg lærte
 
 - Hvordan koble designvalg direkte til dynamiske data

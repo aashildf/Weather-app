@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>Illustrasjoner – Preview</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f0f4f8;
+      padding: 2rem;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .preview-item {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .preview-item:hover {
+      transform: translateY(-6px);
+    }
+
+    .preview-item img {
+      width: 160px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .poem {
+      font-size: 0.9rem;
+      font-style: italic;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #666;
+      padding-top: 1.5rem;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Illustrations & Custom Weather Reports</h1>
+
+  <div class="preview-grid">
+    <div class="preview-item">
+      <img src="../icons/sunnygirl.svg" alt="Sol">
+      <div class="poem">Sol over Fløyen – ta med kaffe på termos og finn en benk med utsikt.</div>
+    </div>
+
+    <div class="preview-item">
+      <img src="../icons/rain_girl.svg" alt="Regn">
+      <div class="poem">Det regner i Bergen – byen speiler seg vakkert i vannet.</div>
+    </div>
+
+    <div class="preview-item">
+      <img src="../icons/winter_girl.svg" alt="Snø">
+      <div class="poem">Snø over fjellene – perfekt dag for Fløybanen og aketur.</div>
+    </div>
+
+    <div class="preview-item">
+      <img src="../icons/weather_girl.svg" alt="Overskyet">
+      <div class="poem">Overskyet, men tørt – perfekt for en tur i Skostredet.</div>
+    </div>
+
+    <div class="preview-item">
+      <img src="../icons/storm.svg" alt="Torden">
+      <div class="poem">Torden ruller over fjellene – kanskje en konsert i Grieghallen?</div>
+    </div>
+  </div>
+
+  <footer>
+    Illustrasjonene er AI-generert og videre bearbeidet i Figma.  
+    Tekstene er skrevet av Åshild.
+  </footer>
+
+</body>
+</html>
