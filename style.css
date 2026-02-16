@@ -168,22 +168,46 @@ h2 {
 }
 
 
-/* cellphone */
+
+/* ----------------------------------------------- */
+/* MEDIA QUERY*/
+/* ------------------------------------------------ */
 @media (max-width: 768px) {
+
   .main-grid {
     grid-template-columns: 1fr; 
-    padding: 0;
+    padding: 1rem;
   }
 
-  .visual-panel {
+   .visual-panel {
+    max-height: none;
+    height: auto;
+    overflow: visible;
+  }
+
+  /* .visual-panel {
     display: block;
     text-align: center; 
-  }
+     max-height: none;
+    height: auto;
+    overflow: visible;
+  } */
+
+  .weather-card {
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+.weather-icon img {
+  width: 150px;
+}
+
 
   .bergen-img {
-    width: 100%;        
+    width: 100% !important;      
     max-width: 320px; 
-    margin:0 auto;  
+    margin:0 auto !important;
     display: block;      
   }
 
