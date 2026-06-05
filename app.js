@@ -178,21 +178,6 @@ async function getWeather() {
     const iconImg = document.getElementById("weather-icon");
     iconImg.src = getIcon(code);
 
-    // custom text and picture
- 
-    const extra = customContent[code];
-    const textContainer = document.querySelector(".custom-text");
-    const figureContainer = document.querySelector(".custom-figure");
-
-    if (extra) {
-      textContainer.textContent = extra.text;
-      figureContainer.innerHTML = `<img src="${extra.image}" alt="Ekstra værbilde">`;
-    } else {
-      textContainer.textContent =
-        "Været er skiftende, ta det som det kommer.";
-      figureContainer.innerHTML = `<img src="icons/cloudy_girl.svg" alt="Standard bilde">`;
-    }
-
   } catch (e) {
     document.getElementById("desc").textContent = "Feil ved henting av vær";
   }
@@ -228,6 +213,20 @@ fetch(url)
       `${String(now.getHours()).padStart(2, "0")}`;
     const currentIndex = hourlyTimes.findIndex((t) => t.startsWith(localHour));
 
+    // Custom tekst og bilde basert på nåværende times kode
+    const currentCode = currentIndex >= 0 ? hourlyCodes[currentIndex] : current.weathercode;
+    const extra = customContent[currentCode];
+    const content = extra
+      ? { text: extra.text, image: extra.image }
+      : { text: "Været er skiftende, ta det som det kommer.", image: "icons/cloudy_girl.svg" };
+
+    document.querySelector(".custom-text").textContent = content.text;
+    document.querySelector(".custom-figure").innerHTML = `<img src="${content.image}" alt="Ekstra værbilde">`;
+    const mobileText = document.querySelector(".mobile-card-text");
+    const mobileFigure = document.querySelector(".mobile-card-figure");
+    if (mobileText) mobileText.textContent = content.text;
+    if (mobileFigure) mobileFigure.innerHTML = `<img src="${content.image}" alt="">`;
+
     const hourlyContainer = document.querySelector(".forecast-grid.hourly");
     hourlyContainer.innerHTML = "";
 
@@ -256,9 +255,12 @@ fetch(url)
       const code = data.daily.weathercode[i];
 
       dailyContainer.innerHTML += `
-        <div class="forecast-day">
-          <img src="${getIcon(code)}" alt="${description[code] || "Vær"}" />
-          <div>${weekday} – Max ${max}° / Min ${min}°</div>
+        <div>
+          <div class="forecast-day-label">${weekday}</div>
+          <div class="forecast-day">
+            <img src="${getIcon(code)}" alt="${description[code] || "Vær"}" />
+            <div>${max}° / ${min}°</div>
+          </div>
         </div>
       `;
     }

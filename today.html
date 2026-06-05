@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bergen i dag</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="today.js" defer></script>
+</head>
+
+<body class="forecast-page">
+  <div class="main-grid">
+    <div class="weather-grid">
+      <div class="weather-wrapper">
+        <a href="index.html" class="back-link">← Tilbake</a>
+        <div class="forecast-title-card">
+          <img id="today-bg-icon" src="icons/cloudy.svg" class="forecast-title-bg-icon" alt="" />
+          <p class="weather-uppercase">Bergen</p>
+          <p class="forecast-title-heading">I DAG</p>
+          <p class="forecast-title-dates" id="today-date"></p>
+        </div>
+      </div>
+
+      <div class="glass-section">
+        <h2>Time for time</h2>
+        <div class="forecast-detail-grid" id="today-detail"></div>
+      </div>
+
+      <div class="glass-section">
+        <h2>Dagens varsel</h2>
+        <p id="today-summary" class="today-summary"></p>
+      </div>
+    </div>
+
+    <section class="visual-panel">
+      <img src="icons/bergen7.svg" alt="Bergen illustrasjon" class="bergen-img">
+      <div class="custom-text" id="today-custom-text"></div>
+      <div class="custom-figure" id="today-custom-figure"></div>
+    </section>
+  </div>
+</body>
+
+<footer class="site-footer">
+  © Åshild · Bergen Weather App
+  Designet og utviklet med kjærlighet til vestlandsvær.
+</footer>
+
+</html>

@@ -17,30 +17,41 @@
   <div class="main-grid">
     <div class="weather-grid">
 <div class="weather-wrapper">
-    <div class="weather-card">
-        <div class="weather-text">
-            <p class="weather-uppercase">Været i Bergen i dag</p>
-            <p class="weather-temp" id="temp">2°C</p>
-            <p class="weather-desc" id="desc">Lett regn</p>
-        </div>
-        <div class="weather-icon">
-  <img id="weather-icon" src="icons/cloudy.svg" alt="Værikon" />
-</div>
-</div>
+    <p class="section-label">Bergen i dag</p>
+    <a href="today.html" class="forecast-day-link">
+      <div class="weather-card">
+          <div class="weather-text">
+              <p class="weather-uppercase">Været i Bergen i dag</p>
+              <p class="weather-temp" id="temp">2°C</p>
+              <p class="weather-desc" id="desc">Lett regn</p>
+          </div>
+          <div class="weather-icon">
+            <img id="weather-icon" src="icons/cloudy.svg" alt="Værikon" />
+          </div>
+          <div class="mobile-card-extra">
+            <p class="mobile-card-text"></p>
+            <div class="mobile-card-figure"></div>
+          </div>
+      </div>
+    </a>
 </div>
 
 
   <!-- Rest of today -->
-<div class="glass-section">
-  <h2>Resten av i dag</h2>
-  <div class="forecast-grid hourly"></div>
-</div>
+<a href="today.html" class="section-block-link">
+  <div class="glass-section">
+    <h2>Resten av i dag</h2>
+    <div class="forecast-grid hourly"></div>
+  </div>
+</a>
 
 <!-- Next days -->
-<div class="glass-section">
-  <h2>Kommende dager</h2>
-  <div class="forecast-grid daily"></div>
-</div>
+<a href="forecast.html" class="section-block-link">
+  <div class="glass-section">
+    <h2>Kommende dager</h2>
+    <div class="forecast-grid daily"></div>
+  </div>
+</a>
 </div>
 
 
