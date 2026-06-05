@@ -68,7 +68,7 @@ async function getTodayWeather() {
       "?latitude=60.39299&longitude=5.32415" +
       "&current_weather=true" +
       "&hourly=temperature_2m,weathercode,precipitation_probability,wind_speed_10m" +
-      "&timezone=auto&forecast_days=1"
+      "&timezone=auto&forecast_days=2"
     );
     const data = await response.json();
 
@@ -135,7 +135,7 @@ async function getTodayWeather() {
 
     const startIdx = currentIndex >= 0 ? currentIndex : 0;
 
-    for (let i = startIdx; i < hourlyTimes.length; i++) {
+    for (let i = startIdx; i < Math.min(hourlyTimes.length, 26); i++) {
       const time = hourlyTimes[i].slice(11, 16);
       const temp = hourlyTemps[i];
       const hCode = hourlyCodes[i];
