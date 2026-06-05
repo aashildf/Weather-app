@@ -63,6 +63,7 @@ body {
   width: 250px;
   height: auto;
   opacity: 0.9;
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,0.55));
 }
 
 /* Prognoser */
@@ -91,7 +92,8 @@ body {
 .forecast-hour,
 .forecast-day {
   text-align: center;
-  background: rgba(192, 236, 248, 0.9);
+  background: rgba(208, 242, 251, 0.9);
+
   border-radius: 8px;
   padding: 0.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
@@ -99,9 +101,10 @@ body {
 
 .forecast-hour img,
 .forecast-day img {
-  width: 60px;
+  width: 100px;
   height: auto;
   margin-bottom: 0.5rem;
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,0.55));
 }
 
 h2 {

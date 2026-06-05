@@ -9,9 +9,13 @@ const description = {
   51: "Lett regn",
   53: "Moderate regn",
   55: "Kraftig regn",
-  61: "Snø",
-  63: "Snøbyger",
-  65: "Kraftig snø",
+  61: "Lett regn",
+  63: "Moderat regn",
+  65: "Kraftig regn",
+  71: "Lett snø",
+  73: "Snøbyger",
+  75: "Kraftig snø",
+  77: "Snøkorn",
   80: "Regnbyger",
   81: "Regnbyger",
   82: "Kraftig regnbyger",
@@ -39,7 +43,7 @@ const customContent = {
     image: "icons/cloudy_girl.svg",
   },
   3: {
-    text: "Det ser ut til å  bli oppholdsvær i dag. Kom deg ut og nyt været, Bergen er aller vakrest mellom bygene",
+    text: "Det ser ut til å bli oppholdsvær i dag. Kom deg ut og nyt været, Bergen er aller vakrest mellom bygene",
     image: "icons/cloudy_girl.svg",
   },
 
@@ -69,16 +73,33 @@ const customContent = {
     image: "icons/rain_girl.svg",
   },
 
-  // Snø (61–65)
+  // Regn (61–65)
   61: {
-    text: "Det snør i bergen i dag! Gjør som bergensere flest, og ta Fløybanen opp for å stå på ski eller ake ned igjen, gøy for både liten og stor!!",
-    image: "icons/winter_girl.svg",
+    text: "Det regner litt i Bergen i dag. Finn frem paraplyen og ta en rolig tur langs Bryggen — regnet er jo bare en del av sjelen her.",
+    image: "icons/rain_girl.svg",
   },
   63: {
-    text: "Snøbygene ligger tett over byen. Ta en rusletur langs Lille Lungegårdsvann, og la deg omslutte av det mystiske lyset.",
+    text: "Moderat regn over byen. Perfekt dag for å finne en koselig kafé i Skostredet og nyte en varm kopp kaffe.",
+    image: "icons/rain_girl.svg",
+  },
+  65: {
+    text: "Det pøser ned! Finn frem oljeuhyret og opplev en autentisk Bergensk dag — regnet er tross alt byens varemerke.",
+    image: "icons/rain_girl.svg",
+  },
+
+  // Snø (71–75)
+  71: {
+    text: "Det snør litt i Bergen i dag! Sjeldent syn — nyt det mens det varer og ta en tur opp på Fløyen.",
     image: "icons/winter_girl.svg",
   },
-  65: { text: "Kraftig snø, tid for kakao! Eller hvem vet, fryser det ordentlig på kan du kanskje gå på skøyter på Lungegårdsvannet?", image: "icons/winter_girl.svg" },
+  73: {
+    text: "Snøbyger over byen. Ta en rusletur langs Lille Lungegårdsvann og la deg omslutte av det mystiske lyset.",
+    image: "icons/winter_girl.svg",
+  },
+  75: {
+    text: "Kraftig snø, tid for kakao! Fryser det ordentlig til kan du kanskje gå på skøyter på Lungegårdsvannet?",
+    image: "icons/winter_girl.svg",
+  },
 
   // Torden (95–99)
   95: {
@@ -120,8 +141,15 @@ function getIcon(code) {
     case 82:
       return "icons/heavy_rain.svg";
     case 61:
+      return "icons/light_rain.svg";
     case 63:
+      return "icons/moderate_rain.svg";
     case 65:
+      return "icons/heavy_rain.svg";
+    case 71:
+    case 73:
+    case 75:
+    case 77:
       return "icons/snow.svg";
     case 95:
     case 96:
@@ -193,9 +221,12 @@ fetch(url)
     const hourlyCodes = data.hourly.weathercode;
 
     const now = new Date();
-    const currentIndex = hourlyTimes.findIndex((t) =>
-      t.startsWith(now.toISOString().slice(0, 13))
-    );
+    const localHour =
+      `${now.getFullYear()}-` +
+      `${String(now.getMonth() + 1).padStart(2, "0")}-` +
+      `${String(now.getDate()).padStart(2, "0")}T` +
+      `${String(now.getHours()).padStart(2, "0")}`;
+    const currentIndex = hourlyTimes.findIndex((t) => t.startsWith(localHour));
 
     const hourlyContainer = document.querySelector(".forecast-grid.hourly");
     hourlyContainer.innerHTML = "";
