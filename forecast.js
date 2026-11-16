@@ -8,9 +8,13 @@ const description = {
   51: "Lett regn",
   53: "Moderate regn",
   55: "Kraftig regn",
+  56: "Underkjølt yr",
+  57: "Underkjølt yr",
   61: "Lett regn",
   63: "Moderat regn",
   65: "Kraftig regn",
+  66: "Underkjølt regn",
+  67: "Underkjølt regn",
   71: "Lett snø",
   73: "Snøbyger",
   75: "Kraftig snø",
@@ -18,6 +22,8 @@ const description = {
   80: "Regnbyger",
   81: "Regnbyger",
   82: "Kraftig regnbyger",
+  85: "Snøbyger",
+  86: "Kraftige snøbyger",
   95: "Torden",
   96: "Torden",
   99: "Kraftig torden",
@@ -134,7 +140,14 @@ function getIcon(code) {
     case 73:
     case 75:
     case 77:
+    case 85:
+    case 86:
       return "icons/snow.svg";
+    case 56:
+    case 57:
+    case 66:
+    case 67:
+      return "icons/light_rain.svg";
     case 95:
     case 96:
     case 99:

@@ -8,9 +8,13 @@ const description = {
   51: "Lett regn",
   53: "Moderat regn",
   55: "Kraftig regn",
+  56: "Underkjølt yr",
+  57: "Underkjølt yr",
   61: "Lett regn",
   63: "Moderat regn",
   65: "Kraftig regn",
+  66: "Underkjølt regn",
+  67: "Underkjølt regn",
   71: "Lett snø",
   73: "Snøbyger",
   75: "Kraftig snø",
@@ -18,6 +22,8 @@ const description = {
   80: "Regnbyger",
   81: "Regnbyger",
   82: "Kraftig regnbyger",
+  85: "Snøbyger",
+  86: "Kraftige snøbyger",
   95: "Torden",
   96: "Torden",
   99: "Kraftig torden",
@@ -55,7 +61,8 @@ function getIcon(code) {
     case 53: case 63: return "icons/moderate_rain.svg";
     case 55: case 65: return "icons/heavy_rain.svg";
     case 80: case 81: case 82: return "icons/heavy_rain.svg";
-    case 71: case 73: case 75: case 77: return "icons/snow.svg";
+    case 56: case 57: case 66: case 67: return "icons/light_rain.svg";
+    case 71: case 73: case 75: case 77: case 85: case 86: return "icons/snow.svg";
     case 95: case 96: case 99: return "icons/thunder.svg";
     default: return "icons/cloudy.svg";
   }
@@ -106,6 +113,11 @@ async function getTodayWeather() {
       textEl.textContent = "Været er skiftende, ta det som det kommer.";
       figureEl.innerHTML = `<img src="icons/cloudy_girl.svg" alt="">`;
     }
+
+    const mobileText = document.getElementById("today-mobile-text");
+    const mobileFigure = document.getElementById("today-mobile-figure");
+    if (mobileText) mobileText.textContent = textEl.textContent;
+    if (mobileFigure) mobileFigure.innerHTML = figureEl.innerHTML;
 
     // Generer oppsummeringstekst frå dagens timevise data
     const todayTemps = hourlyTemps.filter((_, i) => i < 24);
